@@ -6,9 +6,9 @@
 <xacro:include filename="$(find cansat_description)/urdf/cansat.gazebo" />
 <link name="base_link">
   <inertial>
-    <origin xyz="0.0 0.0 0.05000000000000001" rpy="0 0 0"/>
-    <mass value="0.9419999999999997"/>
-    <inertia ixx="0.00052" iyy="0.000803" izz="0.001287" ixy="0.0" iyz="-0.0" ixz="0.0"/>
+    <origin xyz="0.0 -3.2286327365022175e-08 0.05004228635760257" rpy="0 0 0"/>
+    <mass value="0.9467113842824633"/>
+    <inertia ixx="0.00052" iyy="0.000806" izz="0.00129" ixy="-0.0" iyz="-0.0" ixz="0.0"/>
   </inertial>
   <visual>
     <origin xyz="0 0 0" rpy="0 0 0"/>
@@ -67,18 +67,180 @@
   </collision>
 </link>
 
-<joint name="‰ñ“] 1" type="continuous">
+<link name="pressure_1">
+  <inertial>
+    <origin xyz="0.0 0.0 0.0025000000000000022" rpy="0 0 0"/>
+    <mass value="0.003925"/>
+    <inertia ixx="0.0" iyy="0.0" izz="0.0" ixy="0.0" iyz="0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.03 -0.0 -0.0595" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find cansat_description)/meshes/pressure_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.03 -0.0 -0.0595" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find cansat_description)/meshes/pressure_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="GPS_1">
+  <inertial>
+    <origin xyz="0.0 0.0 0.0025000000000000022" rpy="0 0 0"/>
+    <mass value="0.003925"/>
+    <inertia ixx="0.0" iyy="0.0" izz="0.0" ixy="0.0" iyz="0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.0 -0.0 -0.0595" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find cansat_description)/meshes/GPS_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.0 -0.0 -0.0595" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find cansat_description)/meshes/GPS_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="IMU_1">
+  <inertial>
+    <origin xyz="0.0 0.0 0.0025000000000000022" rpy="0 0 0"/>
+    <mass value="0.003925"/>
+    <inertia ixx="0.0" iyy="0.0" izz="0.0" ixy="0.0" iyz="0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.03 -0.0 -0.0595" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find cansat_description)/meshes/IMU_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.03 -0.0 -0.0595" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find cansat_description)/meshes/IMU_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="camera_1">
+  <inertial>
+    <origin xyz="-8.401572995760484e-14 0.0006025459279945244 0.009999999999999995" rpy="0 0 0"/>
+    <mass value="0.007858336149163586"/>
+    <inertia ixx="0.0" iyy="0.0" izz="0.0" ixy="0.0" iyz="0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.0 -0.039 -0.057501" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find cansat_description)/meshes/camera_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.0 -0.039 -0.057501" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find cansat_description)/meshes/camera_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="ultrasound_1">
+  <inertial>
+    <origin xyz="-4.943717327231973e-14 0.002972791557565156 4.999999999935612e-07" rpy="0 0 0"/>
+    <mass value="0.020030004223745363"/>
+    <inertia ixx="0.0" iyy="2e-06" izz="2e-06" ixy="0.0" iyz="0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.0 -0.04 -0.05" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find cansat_description)/meshes/ultrasound_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.0 -0.04 -0.05" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find cansat_description)/meshes/ultrasound_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="tail_1">
+  <inertial>
+    <origin xyz="0.0 -0.04319351018119617 -0.021567352048070105" rpy="0 0 0"/>
+    <mass value="0.09245084051642186"/>
+    <inertia ixx="7.2e-05" iyy="1.8e-05" izz="6.1e-05" ixy="0.0" iyz="-2.9e-05" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.0 0.040001 -0.045909" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find cansat_description)/meshes/tail_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.0 0.040001 -0.045909" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find cansat_description)/meshes/tail_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<joint name="wheel_left_joint" type="continuous">
   <origin xyz="0.05 0.0 0.05" rpy="0 0 0"/>
   <parent link="base_link"/>
   <child link="wheel_right_1"/>
   <axis xyz="1.0 0.0 0.0"/>
 </joint>
 
-<joint name="‰ñ“] 2" type="continuous">
+<joint name="wheel_right_joint" type="continuous">
   <origin xyz="-0.05 0.0 0.05" rpy="0 0 0"/>
   <parent link="base_link"/>
   <child link="wheel_left_1"/>
   <axis xyz="-1.0 0.0 0.0"/>
+</joint>
+
+<joint name="static_pressure" type="fixed">
+  <origin xyz="-0.03 0.0 0.0595" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="pressure_1"/>
+</joint>
+
+<joint name="static_gps" type="fixed">
+  <origin xyz="0.0 0.0 0.0595" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="GPS_1"/>
+</joint>
+
+<joint name="static_IMU" type="fixed">
+  <origin xyz="0.03 0.0 0.0595" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="IMU_1"/>
+</joint>
+
+<joint name="static_camera" type="fixed">
+  <origin xyz="0.0 0.039 0.057501" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="camera_1"/>
+</joint>
+
+<joint name="static_ulrasound" type="fixed">
+  <origin xyz="0.0 0.04 0.05" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="ultrasound_1"/>
+</joint>
+
+<joint name="static_tail" type="fixed">
+  <origin xyz="0.0 -0.040001 0.045909" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="tail_1"/>
 </joint>
 
 </robot>

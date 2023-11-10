@@ -1,23 +1,23 @@
 <?xml version="1.0" ?>
 <robot name="cansat" xmlns:xacro="http://www.ros.org/wiki/xacro" >
 
-<transmission name="‰ñ“] 1_tran">
+<transmission name="wheel_left_joint_tran">
   <type>transmission_interface/SimpleTransmission</type>
-  <joint name="‰ñ“] 1">
+  <joint name="wheel_left_joint">
     <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
   </joint>
-  <actuator name="‰ñ“] 1_actr">
+  <actuator name="wheel_left_joint_actr">
     <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
     <mechanicalReduction>1</mechanicalReduction>
   </actuator>
 </transmission>
 
-<transmission name="‰ñ“] 2_tran">
+<transmission name="wheel_right_joint_tran">
   <type>transmission_interface/SimpleTransmission</type>
-  <joint name="‰ñ“] 2">
+  <joint name="wheel_right_joint">
     <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
   </joint>
-  <actuator name="‰ñ“] 2_actr">
+  <actuator name="wheel_right_joint_actr">
     <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
     <mechanicalReduction>1</mechanicalReduction>
   </actuator>
